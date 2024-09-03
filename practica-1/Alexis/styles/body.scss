@@ -1,0 +1,116 @@
+@import "./variables.scss";
+body {
+    font-family: Arial, sans-serif;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    .hero {
+        background-color: $secondary-color;
+        color: $white-text-color;
+        padding: 40px;
+        text-align: center;
+        img {
+            width: 100%;
+            height: 100%;
+            margin: 20px;
+        }
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        .base {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            line-height: 1.75em;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .progression {
+            background-color: $secondary-color;
+            color: $white-text-color;
+            flex: 0 1 35%;
+        }
+        .workout {
+            background-color: $tertiary-color;
+            flex: 0 1 30%;
+            h2 {
+                color: $primary-color;
+            }
+        }
+        .nutrition {
+            background-color: $primary-color;
+            color: $white-text-color;
+            flex: 0 1 35%;
+        }
+        .img-features {
+            width: 85px;
+            height: 65px;
+        }
+    }
+}
+
+// ==========================================================================
+//  ---------------------------- ANIMACIONES  ---------------------------- 
+// ==========================================================================
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Estilo para cada imagen */
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideAnimation 15s infinite;
+}
+
+
+/* Animación para cada imagen */
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+
+/* Keyframes para la animación del slider */
+
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 5;
+    }
+    40% {
+        opacity: 5;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
