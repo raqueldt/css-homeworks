@@ -1,0 +1,10 @@
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin box-sizing-border-box {
+    box-sizing: border-box;
+  }
+  

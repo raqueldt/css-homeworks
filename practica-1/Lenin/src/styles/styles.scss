@@ -1,0 +1,106 @@
+@import './variables';
+@import './mixins';
+
+// Estilos básicos para la página
+body {
+  margin: 0;
+  font-family: $font-family;
+}
+
+// Logo que abarca la barra negra y blanca
+.logo {
+  background-color: $highlight-color;
+  color: $secondary-color;
+  padding: 15px $padding;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+  width: $logo-width;
+  height: $logo-height;
+  z-index: 300;
+  display: inline-block;
+  @include box-sizing-border-box;
+}
+
+// Social Icons container
+.social-icons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: auto;
+  height: $logo-height;
+  line-height: $logo-height;
+}
+
+// Primera barra (negra)
+.top-bar-black {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 0 $padding;
+  text-align: right;
+}
+
+.top-bar-black a {
+  color: $link-color;
+  margin-left: 15px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// Segunda barra (blanca) con menú
+.top-bar-white {
+  background-color: $secondary-color;
+  padding: 10px $padding;
+  font-size: $menu-font-size;
+  white-space: nowrap;
+  padding-left: 1cm; // Desplaza los enlaces a la derecha, dejando espacio para el logo
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+}
+
+.top-bar-white a {
+  color: $primary-color;
+  margin-left: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Imagen principal
+.main-image {
+  width: 100%;
+  height: 700px;
+  background-image: url('https://images7.alphacoders.com/130/thumb-1920-1308025.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+// Footer con tres cajas
+.footer {
+  text-align: center;
+}
+
+.footer-box {
+  display: inline-block;
+  width: $footer-box-width;
+  height: $footer-box-height;
+  text-align: center;
+  padding: $footer-padding;
+  color: $secondary-color;
+  font-weight: bold;
+  @include box-sizing-border-box; // Incluir padding y margin en el ancho
+  margin: 0 10px;
+  vertical-align: top;
+}
+
+.box-grey {
+  background-color: $background-grey;
+}
+
+.box-white {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+.box-red {
+  background-color: $highlight-color;
+}
